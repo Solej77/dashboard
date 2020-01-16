@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+</head>
+<body>
+  <h1>Tablero Ejecutivo</h1>
+  <div id="messages"></div>
+  <br/>
+  <form onsubmit="return addMessage(this)">
+    <label for="">
+      Contrato
+      <input type="number" name="contract" id="contract">
+    </label>
+    <label for="">
+      Facturas Pagadas
+      <input type="number" name="bill" id="bill">
+    </label>
+    <input type="submit" value="Actualizar!">
+  </form>
+  <br>
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
